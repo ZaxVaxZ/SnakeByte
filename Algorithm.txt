@@ -1,0 +1,6 @@
+General solution:
+1. Scan for reachable tiles.
+2. Scan for reachable cells.
+	- IF no reachable cells: kill everyone.
+3. For each snake, go to the nearest reachable cell.
+4. Repeat from step 1 after obtaining a cell.

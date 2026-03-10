@@ -1,0 +1,31 @@
+1- Routing from the head to an energy cell that's [easy to get to]
+
+Reachable rules:
+1- If the head can reach the same level as the cell, it can take it.
+2- If a cell is within L + 1 distance from a tile (v dist + h dist) then we can reach it (L is the snake length).
+
+Reachable tiles:
+1- The head has to be at least 1 square higher than a tile it wants to get to
+2- If the tile is within L distance from a tile (v dist + h dist) then we can reach it (L is the snake length).
+
+Last body part of each snake is impossible to ram into
+
+[easy to get to] = within jumping height AND/OR 
+
+Jumping is ONLY useful to attack or get energy cell
+
+At least one body part should touch a tile
+
+Starting from the front of each snake, we take the first body part on top of a tile as the gravity anchor. It will allows us as many moves as it is far away from the tail.
+
+We should detect if any body part after the anchor becomes a new anchor.
+
+If the body is more than 3 body parts, ramming into shorter snakes is valid.
+
+Beyond a ledge without a target tile, moving up is always the way.
+Try to move back in the opposite direction ASAP.
+
+Alternate strategy for maps where the enemy snakes are within 3 squares: Ram into them and go for a draw.
+
+Alternate strategy for maps where we get larger first or race: block entrance and roam around.
+
